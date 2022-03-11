@@ -80,7 +80,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let sumTotal = 0;
   for(let i = 0; i < testArray.length; i++){
-    sumTotal += testArray[i];
+    sumTotal = sum(sumTotal, testArray[i])[0];
   }
   let response = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`;
   return ([sumTotal, response]);
@@ -106,7 +106,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) { //eslint-disable-line
   let multTotal = 1;
   for(let i = 0; i < testArray.length; i++){
-    multTotal *= testArray[i];
+    multTotal = multiply(multTotal, testArray[i])[0];
   }
   let response = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multTotal}.`;
   return ([multTotal, response]);
